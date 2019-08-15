@@ -1,5 +1,25 @@
 <template>
   <div class="page-home-films">
-    <h1>影片详情页</h1>
+    <Banner :imgs="bannerListImgs" v-if="bannerListImgs.length > 0"></Banner>
   </div>
 </template>
+
+<script>
+import Banner from '../../components/Banner/index'
+import { mapGetters, mapActions } from 'vuex'
+export default {
+  name: 'films',
+  components: {
+    Banner
+  },
+  computed: {
+    ...mapGetters('films', ['bannerListImgs'])
+  },
+  methods: {
+    ...mapActions('films', ['getBannerList'])
+  },
+  created () {
+    this.getBannerList()
+  }
+}
+</script>
