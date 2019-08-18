@@ -14,7 +14,7 @@
 
 @mixin border-bottom {
   position: relative;
-  &::before {
+  &::after {
     content: "";
     height: 1px;
     position: absolute;

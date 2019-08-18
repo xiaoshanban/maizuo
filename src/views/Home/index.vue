@@ -26,7 +26,7 @@ export default {
       tabs: [
         { id: 1, name: '影片', icon: 'iconicon-films', href: '/films' },
         { id: 2, name: '影院', icon: 'iconicon-cinemas', href: '/cinemas' },
-        { id: 3, name: '分类', icon: 'iconicon-sales', href: '/brang' },
+        { id: 3, name: '分类', icon: 'iconicon-sales', href: '/brand/' },
         { id: 4, name: '我的', icon: 'icon-center', href: '/center' }
       ]
     }
@@ -41,6 +41,7 @@ export default {
   flex-direction: column;
   > div:first-child {
     flex: 1;
+    overflow-y: auto;
   }
 }
 </style>

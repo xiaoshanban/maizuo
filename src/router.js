@@ -16,7 +16,12 @@ const routes = [
       { path: "center", component: () => import("./views/Home/center.vue") },
       { path: "films", component: () => import("./views/Home/films.vue") },
       { path: "cinemas", component: () => import("./views/Home/cinemas.vue") },
-      { path: "brang", component: () => import("./views/Home/brang.vue") }
+      {
+        path: "brand/:brandId?",
+        name: "brand",
+        component: () => import("./views/Home/brand.vue")
+      },
+      { path: "", redirect: "/films" }
     ]
   },
   { path: "/city", component: () => import("./views/City/index.vue") },
