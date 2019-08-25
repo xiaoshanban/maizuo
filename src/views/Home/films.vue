@@ -11,6 +11,9 @@
         </van-tab>
       </van-tabs>
     </div>
+    <router-link to="/city" tag="div" class="city-fixed">
+      <span>深圳</span>
+    </router-link>
   </van-list>
 </template>
 
@@ -83,4 +86,21 @@ export default {
 </script>
 
 <style lang="scss">
+.van-list {
+  position: relative;
+  .city-fixed {
+    position: absolute;
+    top: 18px;
+    left: 7px;
+    color: #fff;
+    z-index: 10;
+    font-size: 13px;
+    background: rgba(0, 0, 0, 0.2);
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    text-align: center;
+    padding: 0 5px;
+  }
+}
 </style>
